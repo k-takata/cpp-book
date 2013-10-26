@@ -4610,9 +4610,9 @@ public :
         : a(a), b(b) { }
 
     // コピーコンストラクターが暗黙的に定義される
-    Closure( Cllosure &amp; ) = default ;
+    Closure( Closure &amp; ) = default ;
     // ムーブコンストラクターが暗黙的に定義される可能性がある
-    Closure( Cllosure &amp;&amp; ) = default ;
+    Closure( Closure &amp;&amp; ) = default ;
 
     // デフォルトコンストラクターはdelete定義される
     Closure() = delete ;
@@ -5289,7 +5289,7 @@ typename指定子も使うことができる。
 </p>
 
 <pre>
-teplate &lt; typename T &gt;
+template &lt; typename T &gt;
 void f()
 {
     typename T::type() ; // OK
@@ -5730,7 +5730,7 @@ struct Derived : Base {} ;
 void f(Base &amp; base)
 {// baseはDerivedを指しているとする
     Derived &amp; ref = dynamic_cast&lt;Derived &amp;&gt;(base) ;
-    Derived * ptr = dynamic_csat&lt;Derived *&gt;(&amp;base) ;
+    Derived * ptr = dynamic_cast&lt;Derived *&gt;(&amp;base) ;
 }
 </pre>
 
@@ -6596,7 +6596,7 @@ short x = 0 ;
 // unsigned int型は16bitであるとする。
 unsigned int x = 1 ;
 // result = 2<sup>16</sup> - 1 = 65536 - 1 = 65535
-unsinged int result = -x ;
+unsigned int result = -x ;
 
 x = 100 ;
 // result = 2<sup>16</sup> - 100 = 65536 - 100 = 65436
@@ -6722,7 +6722,7 @@ sizeof( &amp;f ) ;
 // エラー、関数を使うことはできない
 sizeof( f ) ;
 // エラー、不完全型を使うことはできない
-sizoef( Incomplete ) ;
+sizeof( Incomplete ) ;
 </pre>
 
 <p>
@@ -8641,7 +8641,7 @@ int main()
 </p>
 
 <p>
-条件演算子の第一オペランドはboolに変換される。値がtrueであれば、第二オペランドの式が評価され、その結果が返される。値がfalseであれば、第三オペランドの式が評価され、その結果が返される。第二オペランドと第三オペランドは、どちらか片方いしか評価されない。
+条件演算子の第一オペランドはboolに変換される。値がtrueであれば、第二オペランドの式が評価され、その結果が返される。値がfalseであれば、第三オペランドの式が評価され、その結果が返される。第二オペランドと第三オペランドは、どちらか片方しか評価されない。
 </p>
 
 <pre>
@@ -16728,7 +16728,7 @@ struct Derived : Base { } ;
 </pre>
 
 <p>
-この場合、sizoef(Base)とsizeof(Derived)は、同じ値を返すかもしれない。
+この場合、sizeof(Base)とsizeof(Derived)は、同じ値を返すかもしれない。
 </p>
 
 <article>
